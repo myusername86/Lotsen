@@ -1,0 +1,13 @@
+<Project>
+  <!-- Inherit the repo-wide settings, then relax only what makes test code awkward. -->
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
+
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <!-- Test names use underscores (Method_Condition_Result) and inline expected arrays for readability. -->
+    <NoWarn>$(NoWarn);CA1707;CA1861</NoWarn>
+    <!-- Library deprecations should not break the test build; they still show as warnings. -->
+    <WarningsNotAsErrors>$(WarningsNotAsErrors);CS0618</WarningsNotAsErrors>
+  </PropertyGroup>
+</Project>

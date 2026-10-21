@@ -1,0 +1,22 @@
+services:
+  postgres:
+    # pgvector image so the same database serves RAG in Phase 5.
+    image: pgvector/pgvector:pg17
+    container_name: lotsen-postgres
+    environment:
+      POSTGRES_DB: lotsen
+      POSTGRES_USER: lotsen
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    ports:
+      # Bound to localhost only, never exposed on the network.
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - lotsen-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lotsen -d lotsen"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  lotsen-pgdata:

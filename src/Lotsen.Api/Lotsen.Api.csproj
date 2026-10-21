@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <RootNamespace>Lotsen.Api</RootNamespace>
+    <UserSecretsId>lotsen-api-local</UserSecretsId>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lotsen.Audit\Lotsen.Audit.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Agent manifests live at the repo root so they are reviewed like code, and ship next to the API. -->
+    <Content Include="..\..\agents\*.json" LinkBase="agents" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

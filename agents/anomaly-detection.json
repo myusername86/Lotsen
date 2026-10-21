@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "agentId": "agent.anomaly-detection",
+  "name": "Anomaly Detection Agent",
+  "description": "Watches live telemetry and flags unusual signal patterns. Observes only, never acts.",
+  "owner": {
+    "id": "user.fleet-ops-lead",
+    "name": "Fleet Operations Lead"
+  },
+  "enabled": true,
+  "autonomy": "read-only",
+  "tools": [
+    "get_vehicle_status"
+  ],
+  "dataScope": {
+    "vehicles": ["*"],
+    "signals": ["*"]
+  },
+  "budget": {
+    "maxTokensPerDay": 200000,
+    "maxCostPerDayUsd": 1.50
+  }
+}

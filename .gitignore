@@ -1,0 +1,27 @@
+# Build output
+bin/
+obj/
+artifacts/
+TestResults/
+*.trx
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# Secrets and local environment (never commit)
+.env
+*.pfx
+*.key
+secrets.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Frontend (from Phase 2)
+node_modules/
+dist/

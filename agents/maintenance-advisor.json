@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "agentId": "agent.maintenance-advisor",
+  "name": "Maintenance Advisor Agent",
+  "description": "Explains likely causes of faults using telemetry and service documents, and proposes maintenance tickets for a person to approve.",
+  "owner": {
+    "id": "user.workshop-manager",
+    "name": "Workshop Manager"
+  },
+  "enabled": true,
+  "autonomy": "ask-first",
+  "tools": [
+    "get_vehicle_status",
+    "create_maintenance_ticket"
+  ],
+  "dataScope": {
+    "vehicles": ["*"],
+    "signals": [
+      "engine_temp_c",
+      "coolant_level_pct",
+      "oil_pressure_kpa",
+      "battery_soc_pct",
+      "battery_voltage_v",
+      "tyre_pressure_kpa"
+    ]
+  },
+  "budget": {
+    "maxTokensPerDay": 400000,
+    "maxCostPerDayUsd": 3.00
+  }
+}

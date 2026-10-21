@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "agentId": "agent.report",
+  "name": "Report Agent",
+  "description": "Writes the daily utilisation summary for the northern depot (vehicles VH-001 to VH-010).",
+  "owner": {
+    "id": "user.fleet-ops-lead",
+    "name": "Fleet Operations Lead"
+  },
+  "enabled": true,
+  "autonomy": "read-only",
+  "tools": [
+    "get_vehicle_status"
+  ],
+  "dataScope": {
+    "vehicles": ["VH-001", "VH-002", "VH-003", "VH-004", "VH-005", "VH-006", "VH-007", "VH-008", "VH-009", "VH-010"],
+    "signals": ["speed_kmh", "battery_soc_pct", "fuel_level_pct"]
+  },
+  "budget": {
+    "maxTokensPerDay": 100000,
+    "maxCostPerDayUsd": 0.75
+  }
+}

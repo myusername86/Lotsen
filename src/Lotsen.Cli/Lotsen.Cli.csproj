@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Lotsen.Cli</RootNamespace>
+    <AssemblyName>lotsen</AssemblyName>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lotsen.Audit\Lotsen.Audit.csproj" />
+  </ItemGroup>
+
+</Project>

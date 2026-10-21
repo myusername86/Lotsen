@@ -1,0 +1,15 @@
+root = true
+
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+
+[*.{json,yml,yaml,props,csproj,slnx}]
+indent_size = 2
+
+[*.cs]
+# ASP.NET Core has no SynchronizationContext, so ConfigureAwait(false) adds noise without benefit.
+dotnet_diagnostic.CA2007.severity = none

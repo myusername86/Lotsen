@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Lotsen.Api/Lotsen.Api.csproj" />
+    <Project Path="src/Lotsen.Audit/Lotsen.Audit.csproj" />
+    <Project Path="src/Lotsen.Cli/Lotsen.Cli.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Lotsen.IntegrationTests/Lotsen.IntegrationTests.csproj" />
+    <Project Path="tests/Lotsen.UnitTests/Lotsen.UnitTests.csproj" />
+  </Folder>
+</Solution>
