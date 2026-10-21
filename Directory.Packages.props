@@ -5,7 +5,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- Runtime -->
-    <PackageVersion Include="Npgsql" Version="9.0.4" />
+    <PackageVersion Include="Npgsql" Version="10.0.3" />
     <PackageVersion Include="NSec.Cryptography" Version="25.4.0" />
 
     <!-- Tests -->
